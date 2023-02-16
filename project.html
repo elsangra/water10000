@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Project Data</title>
-  <link rel="stylesheet" type="text/css" href="styles1.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
 </head>
@@ -12,19 +12,19 @@
     <div class="pdf-box">
       <div class="pdf">
         <div class="pdf-img">
-          <a href="pdf/Project1.pdf" target="_blank"><img src="pdf/Project1.pdf" alt="Project 1"></a>
+          <embed src="pdf/Project1.pdf#toolbar=0" type="application/pdf" width="100%" height="600px"/>
         </div>
         <h3>Project 1</h3>
       </div>
       <div class="pdf">
         <div class="pdf-img">
-          <a href="pdf/Project2.pdf" target="_blank"><img src="pdf/Project2.pdf" alt="Project 2"></a>
+          <embed src="pdf/Project2.pdf#toolbar=0" type="application/pdf" width="100%" height="600px"/>
         </div>
         <h3>Project 2</h3>
       </div>
       <div class="pdf">
         <div class="pdf-img">
-          <a href="pdf/Project3.pdf" target="_blank"><img src="pdf/Project3.pdf" alt="Project 3"></a>
+          <embed src="pdf/Project3.pdf#toolbar=0" type="application/pdf" width="100%" height="600px"/>
         </div>
         <h3>Project 3</h3>
       </div>
@@ -33,10 +33,10 @@
 
   <script>
     $(document).ready(function(){
-      var pdfs = document.querySelectorAll('.pdf-img img');
+      var pdfs = document.querySelectorAll('.pdf-img embed');
 
       pdfs.forEach(function(pdf){
-        var pdfUrl = pdf.src.split('?')[0];
+        var pdfUrl = pdf.src.split('#')[0];
         var pdfLoadingTask = pdfjsLib.getDocument({url: pdfUrl});
         pdfLoadingTask.promise.then(function(pdf) {
           pdf.getPage(1).then(function(page) {
