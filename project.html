@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Data</title>
+  <link rel="stylesheet" type="text/css" href="styles1.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Project Data</h1>
+    <div class="pdf-box">
+      <div class="pdf">
+        <div class="pdf-img">
+          <a href="pdf/Project1.pdf" target="_blank"><img src="pdf/Project1.pdf" alt="Project 1"></a>
+        </div>
+        <h3>Project 1</h3>
+      </div>
+      <div class="pdf">
+        <div class="pdf-img">
+          <a href="pdf/Project2.pdf" target="_blank"><img src="pdf/Project2.pdf" alt="Project 2"></a>
+        </div>
+        <h3>Project 2</h3>
+      </div>
+      <div class="pdf">
+        <div class="pdf-img">
+          <a href="pdf/Project3.pdf" target="_blank"><img src="pdf/Project3.pdf" alt="Project 3"></a>
+        </div>
+        <h3>Project 3</h3>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      var pdfs = document.querySelectorAll('.pdf-img img');
+
+      pdfs.forEach(function(pdf){
+        var pdfUrl = pdf.src.split('?')[0];
+        var pdfLoadingTask = pdfjsLib.getDocument({url: pdfUrl});
+        pdfLoadingTask.promise.then(function(pdf) {
+          pdf.getPage(1).then(function(page) {
+            var viewport = page.getViewport({scale: 0.5});
+            var canvas = document.createElement('canvas');
+            var context = canvas.getContext('2d');
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            pdf.getPage(1).then(function(page) {
+              var viewport = page.getViewport({scale: 0.5});
+              var canvas = document.createElement('canvas');
+              var context = canvas.getContext('2d');
+              canvas.height = viewport.height;
+              canvas.width = viewport.width;
+
+              var renderContext = {
+                canvasContext: context,
+                viewport: viewport
+              };
+              page.render(renderContext).promise.then(function() {
+                pdf.src = canvas.toDataURL();
+                $(pdf).css('opacity', 1);
+              });
+            });
+          });
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
