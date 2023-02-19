@@ -4,94 +4,38 @@
 <meta charset="utf-8">
 <title>Project Water</title>
 <style>
-	body {
-			margin: 0;
-			padding: 0;
-		}
-		.slideshow-container {
-			position: fixed;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			overflow: hidden;
-			z-index: -1;
-		}
-		.slideshow-container > div {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			background-repeat: no-repeat;
-			background-size: cover;
-			animation: slideshow 9s infinite;
-		}
-		.slideshow-container > div:nth-child(1) {
-			background-image: url('pic1.jpg');
-			animation-delay: 0s;
-		}
-		.slideshow-container > div:nth-child(2) {
-			background-image: url('pic2.jpg');
-			animation-delay: 3s;
-		}
-		.slideshow-container > div:nth-child(3) {
-			background-image: url('pic3.jpg');
-			animation-delay: 6s;
-		}
-		@keyframes slideshow {
-			0% {
-				opacity: 0;
-			}
-			12.5% {
-				opacity: 1;
-			}
-			25% {
-				opacity: 1;
-			}
-			37.5% {
-				opacity: 0;
-			}
-			100% {
-				opacity: 0;
-			}
-		}
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: Arial, sans-serif;
-			background-color: #f7f7f7;
-		}
-		nav {
-			background-color: #4e54c8;
-			background-image: linear-gradient(315deg, #4e54c8 0%, #8f94fb 74%);
-			height: 60px;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding: 0 20px;
-		}
-		nav a {
-			color: #fff;
-			text-decoration: none;
-			font-size: 18px;
-			margin: 0 10px;
-			padding: 10px;
-		}
-		nav a:hover {
-			background-color: rgba(255, 255, 255, 0.2);
-			border-radius: 5px;
-		}
-		nav a.active {
-			background-color: rgba(255, 255, 255, 0.2);
-			border-radius: 5px;
-		}
-		nav a.logo {
-			font-size: 24px;
-			font-weight: bold;
-		}
+	
+     body {
+        background-image: url("/images/pic1.jpg");
+        background-size: cover;
+      }
+section{
+    background-color: lightsteelblue;
+    }
+}
+.hero{
+    background-image: url('pic1.jpg');
+    background-size: cover;
+    enable-background: !important;
+}
 
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="link rel=" stylesheet " href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css ">
+
 
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -106,19 +50,160 @@
 		<div></div>
 		<div></div>
 	</div>
-		<nav>
-		<a href="#" class="logo">Water 10,000</a>
-		<div>
-			<a href="#" class="active">Home</a>
-			<a href="project.html">Projects</a>
-			<a href="#">About Us</a>
+			<header>
+		<div class="logo-container">
+    <div class="logo-text"></div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Coat_of_arms_of_Kenya_%28Official%29.svg" alt="Logo" class="logo-image">
+  </div>
+		<div class="navbar">
+			<div class="logo"><a href="#">MoWIS</a></div>
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="project.html">Project</a></li>
+				<li><a href="login.html">Preference</a></li>
+				<li><a href="contact_us.html">Contact Us</a></li>
+				<li><a href="contact_us.html">About Us</a></li>
+			</ul>
+			<a href="#" class="action_btn">Go Back</a>
+			<div class="toggle_btn">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+			<div class="dropdown_menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="Project.html">Project</a></li>
+				<li><a href="login.html">Preference</a></li>
+				<li><a href="contact_us.html">Contact Us</a></li>
+				<li><a href="contact_us.html">About Us</a></li>
+				<li><a href=index.html class="action_btn">Go Back</a></li>
+			</div>
 		</div>
-	</nav>
- <section class="hero">
+	</header>
+	<script>
+		const toggleBtn = document.querySelector('.toggle_btn');
+		const toggleBtnIcon = document.querySelector('.toggle_btn i');
+		const dropDownMenu = document.querySelector('.dropdown_menu');
+
+		toggleBtn.onclick = function() {
+			dropDownMenu.classList.toggle('open');
+			const isOpen = dropDownMenu.classList.contains('open');
+
+			toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+		}
+	</script>
+<section class="hero">
     <div class="hero-content">
-      <h2>Bringing Clean Water to Everyone</h2>
+      <div class="text-box ">
+        <div>
+            <h2> </h2>
+            <h2> </h2>
+            
+          <h2>MINISTRY OF WATER,SANITATION AND IRRIGATION</h2>
+          <p style="color: yellowgreen; font-size: 22px; font-weight:bold; "><br>STATE DEPARTMENT FOR WATER AND SANITATION<br><br>WATER 10,000 PROGRAMME ACTION PLAN<br><br>(MAJI NYUMBANI INITIATIVES)<br><br>2023</p>
+          </div>
+        <div><h1>Bringing Clean Water to Everyone</h1>
       <p>Our mission is to provide clean and safe drinking water to communities in need.</p>
-      <a href="project.html" class="btn">Learn More</a>
+      <a href="project1.html" class="btn">Learn More</a></div>
+    </div>
+  </div>
+</section>
+</section>
+
+
+        <div id="particles-js "></div>
+   
+   </section> 
+   <br>
+   <br>
+<!-----Course----->
+   <section  class="course " >
+       <h1 style="color: rgb(42, 104, 238); ">SUSTAINABILITY AND MANAGEMENT OF 10,000 WATER PROJECTS </h1>
+       <p style="color: black; ">The state department of water and sanitation has put up some measures to sustain and manage the 10,000 water projects<br> through water and sanitation services as a <br>shared responsibilities, management of water for school boreholes and no-revenue water management as follows:-</p>
+      
+       <div class="row ">
+        <div class="course-col ">
+            <h4>WATER AND SANITATION SERVICES</h4>
+            <p style="color: black; ">The sustainable water and sanitation services provision is a shared responsibility between national and county governments as per the constitution of Kenya.The aim is to ensure the right of every person to clean and safe water in adequate quantities by developing sustainable water systems.This also includes the development of policies, and regulations and also owning, protecting, and sharing natural resources.  </p>
+                </div>
+        <div class="course-col ">
+            <h4>MANAGEMENT OF WATER FOR SCHOOL BOREHOLES</h4>
+            <p style="color: black; ">Boreholes are strategically located in public institutions and will also serve nearby communities.There is an equitable distribution of boreholes across the wards to increase impacts.Also it establish a committee led by school administration and comprise of representatives from community members and benefitting institutions.It helps the management committee to develop a business plan and recommend affordable tariffs to assist in the management of the infrastructure. </p>
+             </div>
+        <div class="course-col ">
+            <h4>NON-REVENUE WATER MANAGEMENT</h4>
+            <p style="color: black; ">Through the MOUs signed between Ministry and County Governments, there is a framework for the management of Non-Revenue Water to improve the current water and sanitation access.In addition, each county is expected to develop a roadmap and implementation plan to guide the reduction of NRW with clear annual performance indicators.The process should ensure stakeholders and public participation as guided by the constitution and relevant laws.</p>
+              </div>
+       </div>
+     </section>
+   
+    </section>
+<!--------Campus--------->
+    <section class="campus ">
+       <h1 style="color: rgb(42, 104, 238); ">Our Location</h1>
+       <p>The main Headquarters for ministry of water,sanitation and irrigation is based in MAJI HOUSE,upper hill, off Ngong Road. Nairobi.</p>
+        <div class="row ">
+         <div class="campus-col ">
+             <img src="agency1.jpg ">
+             <div class="layer ">  
+                 <h3>ATHI WATER PLAZA</h3> 
+         </div> 
+       </div>
+         
+       <div class="campus-col ">
+        <img src="majihouse.png ">
+        <div class="layer ">  
+            <h3>MAJI HOUSE</h3> 
+    </div> 
+  </div>
+  <div class="campus-col ">
+    <img src="kiarutara.jpg ">
+    <div class="layer ">  
+        <h3>KIARUTARA</h3> 
+</div> 
+</div>
+    </section>
+<!---------------Facilities-------------->
+<section class="facilities ">
+
+   <h1 style="color: rgb(42, 104, 238); ">Our Purpose</h1>
+   <p>To ensure water resources availability and accessibility by all. To contribute to national development by promoting and supporting integrated water resource management to enhance water availability and accessibility. All of our aim can conquer the following;</p>
+   <div class="row ">
+      <div class="facilities-col "> 
+        <img src="kungoja.jpg ">
+            <h3>Reducing Lining of Water Collection</h3> 
+            <p>Through the availability of water within the society can lead also to the reduction on lining during the collection and fetching of water.</p>
+         
+      </div>
+
+      <div class="facilities-col "> 
+        <img src="maasai.jpg ">
+            <h3>Ensuring Water Availability</h3> 
+            <p>The Ministry's mandate entails the development and management of Water Resources, drainage and land reclamation, Sanitation and Irrigation. This includes water harvesting and storage in order to reduce pressure on freshwater resources; and make available adequate water for supply and usage.</p>
+      
+      </div>
+
+      <div class="facilities-col "> 
+        <img src="pov.jpg ">
+            <h3>Reduce Poverty in the Society</h3> 
+            <p>But the contribution of water management to poverty reduction goes far beyond just drinking water and sanitation: water is essential for improving the health and agriculture development which can lower poverty rate in the society.</p>
+   
+      </div>
+   </div>
+ </section>
+   </section>
+
+   
+
+     
+   <!---------JavaScript for toggle Menu--------->
+   <script>
+       var navLinks = document.getElementById("navLinks ");
+       function showMenu(){
+           navLinks.style.right = "0 ";
+       }
+       function hideMenu(){
+           navLinks.style.right = "-200px ";
+       }
+   </script>
     </div>
   </section>
 
@@ -142,15 +227,11 @@
       </li>
     </ul>
   </section>
-
-  <section class="cta">
-    <h2>Join Us in Our Mission</h2>
-    <p>Together we can make a difference in the lives of people who lack access to clean water. Join us in our mission to provide safe drinking water to everyone.</p>
-
-  </section>
+ </section>
 	
 
 </div>
+<section id="five">
 <section id="slider" class="pt-5">
   <div class="container">
     <h1 class="text-center"><b></b></h1>
@@ -195,6 +276,7 @@
 			</div>
   </div>
 </section>
+</section>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
@@ -204,6 +286,62 @@
 		<div></div>
 		<div></div>
 		<div></div>
-
+<footer>
+<div class="container-fluid bg-grey py-5 ">
+    <div class="container">
+       <div class="row ">
+          <div class="col-md-6 ">
+             <div class="row ">
+                <div class="col-md-6 ">
+                   <div class="logo-part ">
+                      <img src="harambee.png " class="w-50 logo-footer " >
+                      <p>MINISTRY OF WATER,SANITATION AND IRRIGATION</p>
+                      <p>Maji House, Upper hill, Off Ngong Road, Nairobi Telephone: +254 0202716103, 4900000 Fax: +254 0202727622 Email: ps@water.go.ke.Website: http://www.water.go.ke.</p>
+                   </div>
+                </div>
+                <div class="col-md-6 px-4 ">
+                   <h6> About Ministry</h6>
+                   <p>"MAJI NYUMBANI INITIATIVE "</p>
+                   <p>Copyright@:  Ministry of Water, Sanitation and Iriigation: 2023</p>
+                   <a href="login.html " class="btn-footer "> More Info </a><br>
+                   <a href="contact_us.html " class="btn-footer "> Contact Us</a>
+                </div>
+             </div>
+          </div>
+          <div class="col-md-6 ">
+             <div class="row ">
+                <div  class="col-md-6 px-4 ">
+                   <h6> Help us</h6>
+                   <div class="row ">
+                      <div class="col-md-6 ">
+                         <ul>
+                            <li> <a href="index.html"> Home</a> </li>
+                            <li> <a href="login.html "> Preference</a> </li>
+                            <li> <a href="contact_us.html "> Contact Us</a> </li>
+                           
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-md-6 ">
+                   <h6> Social Media</h6>
+                   <div class="social ">
+                      <a href=" "><i class="fa fa-facebook " aria-hidden="true "></i></a>
+                      <a href=" "><i class="fa fa-instagram " aria-hidden="true "></i></a>
+                   </div>
+                   <form class="form-footer my-3 ">
+                      <input type="text "  placeholder="search here.... " name="search ">
+                      <input type="button " value="Go " >
+                   </form>
+                   <p>Ministry of Water, Sanitation and Irrigation: 2023</p>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    </div> 
+</div>
+</footer>
 </body>
 </html>
+
